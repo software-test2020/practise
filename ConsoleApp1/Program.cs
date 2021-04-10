@@ -11,34 +11,28 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int[] d = { 3, 5, 4, 6 };
-
-            Console.WriteLine(counter(d));
-
-
-
-
-
-
-
-
-
-
-
-
+            Console.Write("\n\nFunction : To calculate the sum of individual digits of a number: \n");
+            Console.Write("-------\n");
+            Console.Write("enter a number ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("the sum of digits of the number {0} is {1} \n",x, test(x));
 
 
         }
 
-       public static int  counter(int[] array)
+       public static int   test (int x)
         {
+            int sum = 0;
 
+            for (int y=x; y!=0;y/=10)
 
-           int b= array.Sum();
+            {
 
-            return b;
+                sum += y % 10;
+            }
 
-            
+            return sum;
+           
 
 
 
